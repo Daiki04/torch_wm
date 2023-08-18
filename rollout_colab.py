@@ -12,7 +12,7 @@ class CarRacing_rollouts():
     def __init__(self, seed_num=0):
         self.env = gym.make('CarRacing-v2', render_mode='rgb_array', domain_randomize=False)
         self.env.reset(seed=seed_num)
-        self.file_dir = './data/CarRacing/'
+        self.file_dir = './torch_wm/data/CarRacing/'
         # self.file_dir = './content/data/CarRacing/'
 
     def get_rollouts(self, num_rollouts=10000, reflesh_rate=5, max_episode=300):
